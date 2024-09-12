@@ -1,0 +1,13 @@
+server:
+  port: 8580
+eureka:
+  instance:
+    hostname: localhost
+    client:
+      regiseterWithEureka: false
+      fetchRegisrty: false
+      serviceUrl:
+        defaultZone:
+          http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
