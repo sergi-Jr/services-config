@@ -1,3 +1,4 @@
+#=================SPRING====================
 spring:
   jpa:
     generate-ddl: true
@@ -9,6 +10,8 @@ spring:
       enabled: always
 server:
   port: 8081
+  #===========================================
+  #=================HEALTH====================
 management:
   endpoints:
     web:
@@ -23,3 +26,14 @@ management:
       enabled: false
     diskspace:
       enabled: true
+#===========================================
+#=================EUREKA====================
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8580/eureka/
+#===========================================
